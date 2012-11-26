@@ -1,0 +1,44 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="notes.rrhh">
+
+  <include package="plone.app.contentmenu" />
+
+     <browser:page
+        name="MigratefromNotesRRHH"
+        for="*"
+        class=".migrateRRHH.NotesSyncRRHH"
+        permission="MigrateNotesRRHH.Execute"
+        />
+
+     <browser:page
+        name="recreateLinksRRHH"
+        for="*"
+        class=".recreateLinks.recreateLinks"
+        permission="MigrateNotesRRHH.Execute"
+        />
+
+    <browser:resourceDirectory
+        name="notes_rrhh_images"
+        directory="images"
+        />
+
+    <browser:resourceDirectory
+        name="notes_rrhh_styles"
+        directory="styles"
+        />
+
+    <browser:resourceDirectory
+        name="notes_rrhh_scripts"
+        directory="scripts"
+        />
+
+    <browser:page
+        for="*"
+        name="key"
+        class=".keywords_listing.KeywordsView"
+        permission="zope2.View"
+      />
+
+</configure>

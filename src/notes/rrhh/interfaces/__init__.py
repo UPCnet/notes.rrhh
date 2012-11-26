@@ -1,0 +1,1 @@
+from documentRRHH import IDocumentRRHH

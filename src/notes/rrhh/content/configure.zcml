@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="notes.rrhh">
+
+  <class class=".documentRRHH.DocumentRRHH">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IDocumentRRHH"
+        />
+  </class>
+
+  <browser:page
+        for="*"
+        name="rrhh_view"
+        class=".notesView.notesView"
+        permission="zope2.Public"
+  />
+
+</configure>
