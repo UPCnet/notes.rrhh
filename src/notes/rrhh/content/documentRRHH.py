@@ -27,20 +27,20 @@ DocumentRRHHSchema = folder.ATFolderSchema.copy() + atapi.Schema((
              ),
 
             #CATEGORIES
-            atapi.LinesField(
-                name='categoryRRHH',
-                widget=atapi.InAndOutWidget(
-                    format="select",
-                    label_msgid='categoryRRHH_label',
-                    description_msgid='categoryRRHH_help',
-                    i18n_domain='notes.rrhh',
-                ),
-                languageIndependent=True,
-                required=True,
-                schemata="categorization",
-                vocabulary=NamedVocabulary('categoryRRHH_keywords'),
-                enforceVocabulary=True,
-            ),
+            #atapi.LinesField(
+            #    name='categoryRRHH',
+            #    widget=atapi.InAndOutWidget(
+            #        format="select",
+            #        label_msgid='categoryRRHH_label',
+            #        description_msgid='categoryRRHH_help',
+            #        i18n_domain='notes.rrhh',
+            #    ),
+            #    languageIndependent=True,
+            #    required=False,
+            #    schemata="categorization",
+            #    vocabulary=NamedVocabulary('categoryRRHH_keywords'),
+            #    enforceVocabulary=True,
+            #),
 
 ))
 
@@ -48,7 +48,6 @@ DocumentRRHHSchema['title'].storage = atapi.AnnotationStorage()
 DocumentRRHHSchema['description'].storage = atapi.AnnotationStorage()
 
 # Hide default category option
-# DocumentRRHHSchema['subject'].widget.visible = {'view': 'invisible', 'edit': 'invisible'}
 DocumentRRHHSchema['description'].widget.visible = {'view': 'invisible', 'edit': 'invisible'}
 DocumentRRHHSchema['language'].widget.visible = {'view': 'invisible', 'edit': 'invisible'}
 DocumentRRHHSchema['relatedItems'].widget.visible = {'view': 'invisible', 'edit': 'invisible'}

@@ -19,6 +19,13 @@
         permission="MigrateNotesRRHH.Execute"
         />
 
+     <browser:page
+        name="modifyPath"
+        for="*"
+        class=".modifyPath.modify"
+        permission="MigrateNotesRRHH.Execute"
+        />
+
     <browser:resourceDirectory
         name="notes_rrhh_images"
         directory="images"
